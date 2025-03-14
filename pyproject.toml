@@ -8,9 +8,9 @@ description = "A Python package that lets users generate festive birthday-themed
 version = "0.1.1"
 authors = [
   { name="Shuyuan Yang", email="sy3644@nyu.edu" },
-  { name="Frank Fang", email="email_waited_to_add" },
-  { name="Lauren Zhou", email="email_waited_to_add" },
-  { name="name_waited_to_add", email="email_waited_to_add" }
+  { name="Frank Fang", email="email" },
+  { name="Lauren Zhou", email="email" },
+  { name="name", email="email" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
