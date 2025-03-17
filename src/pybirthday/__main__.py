@@ -13,8 +13,11 @@ def main():
     line = pybirthday.cake('Alex', 'Words')
     print(line)
 
-    candle_str = pybirthday.candle(3)
-    print(candle_str)
+    candle_str_1 = pybirthday.candle(3)
+    print(candle_str_1)
+
+    candle_str_2 = pybirthday.candle()
+    print(candle_str_2)
 
 if __name__ == "__main__":
     # run the main function
