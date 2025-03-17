@@ -3,7 +3,7 @@
 def cake(name, words):
     return
 
-def candle(n: int) -> str:
+def candle(n):
     candle_parts = [
         "  )  ",  
         " (()) ",  
