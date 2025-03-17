@@ -1,19 +1,77 @@
-
+import random
 
 def cake(name, words):
     return
 
-def candle(n):
-    candle_parts = [
-        "  )  ",  
-        " (()) ",  
-        "  )(  ",  
-        " (()) ",  
-        "  ))  ",  
-        "  )   ",  
-        "  ^   ",  
-        " |||  ",  
-        " |||  "
+def candle(n=None):
+    """
+    Generate an ASCII art of a candle.
+
+    This function returns an ASCII art candle either randomly or based on a specified index.
+    """
+    candle_styles = [
+        [
+            "   (  ",
+            "  ) ) ",
+            " ( (  ",
+            "  ) ) ",
+            "   V  ",
+            "   |  ",
+            " .-+-.",
+            " |   |",
+            " '---'"
+        ],
+        [
+            "                           __",
+            "                        ,\"  \".",
+            "     _      .---.    _ /#     \\",
+            "   ,' `.  ,'     `..\" \".      ,--.",
+            "   |#   `/ #      (#    )    /    )",
+            "    `.   |         )   (`.__/    /",
+            "      `. \\        (     )/'/    /",
+            "        `.\\       /)   (( /    /",
+            "           `.   .'(     )y    /",
+            "             >_<\\  `._.'(    /",
+            "             /   ) /'-`.->,-'",
+            "            (   ( (   (",
+            "             )     )   ) ",
+            "                  ("
+        ],
+        [
+            "            `'`.",
+            "       .`' ` * .",
+            "      :  *  *|  :",
+            "       ' |  || '",
+            "        `|~'||'",
+            "        v~v~v~v",
+            "        !@!@!@!",
+            "       _!_!_!_!_",
+            "      |  ||    ||",
+            "      |  ||   |||",
+            "      }{{{{}}}{{{",
+            "         __||__"
+        ],
+        [
+            "              ,-.",
+            " ,-.     __  (  ))",
+            " \\ )\\  ,\"::\". ) (  ,-.",
+            "  \\  \\|::::::(   )/%%/",
+            "   \\  \\::::::/) (/%%/",
+            "    `__\\:::,-\"-. )%/",
+            "   ,####`'/88888\\-'",
+            "  |#### #|\\88888/",
+            "  \\######/)`.8,'",
+            "   `####'(.-'7\\",
+            "     `7`-().,'/)",
+            "         /)/`y(",
+            "        ( ( ( )\\",
+            "         ` ' `  `  "
+        ],
     ]
-    result = "\n".join("".join(part for _ in range(n)) for part in candle_parts)
-    return result
+
+    if n is None:
+        style = random.choice(candle_styles)
+    else:
+        style = candle_styles[n]
+
+    return "\n".join(style)
