@@ -9,6 +9,9 @@ build = "*"
 pybirthday = {file = ".", editable = true}
 
 [dev-packages]
+pytest = "*"
+build = "*"
+twine = "*"
 
 [requires]
 python_version = "3.12"
