@@ -10,7 +10,7 @@ authors = [
   { name="Shuyuan Yang", email="sy3644@nyu.edu" },
   { name="Frank Fang", email="hf2371@nyu.edu" },
   { name="Lauren Zhou", email="email2@nyu.edu" },
-  { name="name", email="email3@nyu.edu" }
+  { name="Eric Xu", email="zx1244@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
