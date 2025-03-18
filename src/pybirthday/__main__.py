@@ -19,6 +19,12 @@ def main():
     candle_str_2 = pybirthday.candle()
     print(candle_str_2)
 
+    balloon_str_1 = pybirthday.balloon(2)  # Display a specific balloon
+    print(balloon_str_1)
+    
+    balloon_str_2 = pybirthday.balloon()  # Display a random balloon
+    print(balloon_str_2)
+
 if __name__ == "__main__":
     # run the main function
     main()
