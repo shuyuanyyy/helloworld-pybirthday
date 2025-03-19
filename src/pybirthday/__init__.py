@@ -1,2 +1,2 @@
 """empty"""
-from .pybirthday import cake, candle
+from .pybirthday import cake, candle, balloon
