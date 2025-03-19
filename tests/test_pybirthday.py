@@ -437,7 +437,7 @@ class Tests:
         The default pattern of cake will be displayed ignoring the name.
         '''
         
-        invalid_cake = teddy("abcdefghijklmnopqrst", "Hi, this is a test.")
+        invalid_cake = cake("abcdefghijklmnopqrst", "Hi, this is a test.")
         expected_cake = "\n".join([
             r"                0   0",
             r"                |   |",
