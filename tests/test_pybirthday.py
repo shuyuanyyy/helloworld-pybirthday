@@ -1,5 +1,41 @@
 import pytest
-from src.pybirthday.pybirthday import cake, candle, balloon
+from src.pybirthday.pybirthday import cake, candle, balloon, teddy
+
+plain_teddy = "\n".join([
+            r"     __",
+            r"  .'`  `'.",
+            r" /        \ _",
+            r";      __.'` `'.",
+            r"|   .'`  `'.    \ ",
+            r" \ / HAPPY  \    ;",
+            r"  ;          ;   |",
+            r"  | BIRTHDAY |   ;   _",
+            r"  ;          ;-./-_-` '-.",
+            r"  /\        /_(;'/ `\    '.",
+            r" ;  '.__  .'\|| '    |     '.",
+            r" |      ),\| \ \     /       \ ",
+            r" ;        \ \|/   __/         \  __",
+            r"  \        \||\.~'_ `'.;-.___.~'` _'~.",
+            r"   '.__  _/|/|/{ (_`.'         '.`_) }",
+            r"       `)/`\  \ \ .'  _ 0_._0 _  '. /     .,_",
+            r"             \|| } -.'   (_)   '.- {    _{   `\ ",
+            r"              \|{_ / '.___|___.' \  }  //`._   |",
+            r"            /`    \     |   |     }  }:'-.  ```''--..==,",
+            r"           {      ,}    \-'-/   .'  } {,`-'.       //>`\>",
+            r"          {`   _./|\._.  '-'  ._ .~` /`    ;'.    //>  |>",
+            r"          {     {///(  `-.-.-`  ) _.'     /   '. ||>   />",
+            r"           \     \|\);-- ( ) -- (`       }      `\ \>_.'>",
+            r"            ;  _/`/(__.'/`-'.,__/`,    .`         `'' '`",
+            r"           .-'`     ;-.(     \_(;  \ .'     .--,",
+            r"          (`-._   ./   `       '.   `-._..~` /\ \ ",
+            r"           `'-;/``.              `;-'`:     |  ||",
+            r"      .--._ _.' .  \      o       ;  .      |  /|",
+            r"     /.-.  `     .  '._        _.'  '       \_//",
+            r"     ||  \        `.   `'-----`  _.~`--..__,..'",
+            r"     |\   |       .~`'--......--'",
+            r"     \ '._/   _.~`",
+            r"       `.__.-'"
+        ])
 
 class Tests:
 
@@ -275,3 +311,70 @@ class Tests:
             ]
         ]
         assert any(result == balloon for balloon in balloon_styles)
+
+    #TESTS FOR TEDDY
+    def test_default_teddy(self):
+        '''
+        Testing when called without arguments.
+        The default message "HAPPY BIRTHDAY" is displayed on lines 1 and 3
+        '''
+        default_teddy = teddy()
+        expected_teddy = plain_teddy
+
+        assert default_teddy == expected_teddy, f"Expected default teddy, but got:\n{default_teddy}"
+    
+    def test_message_teddy(self):
+        '''
+        Testing when called with valid age and name arguments.
+        The default message "HAPPY BIRTHDAY" is displayed on lines 1 and 3,
+        and the age and name correctly shows up centered and all caps on lines 2 and 4
+        '''
+        message_teddy = teddy("20th", "Lauren")
+        expected_teddy = "\n".join([
+            r"     __",
+            r"  .'`  `'.",
+            r" /        \ _",
+            r";      __.'` `'.",
+            r"|   .'`  `'.    \ ",
+            r" \ / HAPPY  \    ;",
+            r"  ;   20TH   ;   |",
+            r"  | BIRTHDAY |   ;   _",
+            r"  ;  LAUREN  ;-./-_-` '-.",
+            r"  /\        /_(;'/ `\    '.",
+            r" ;  '.__  .'\|| '    |     '.",
+            r" |      ),\| \ \     /       \ ",
+            r" ;        \ \|/   __/         \  __",
+            r"  \        \||\.~'_ `'.;-.___.~'` _'~.",
+            r"   '.__  _/|/|/{ (_`.'         '.`_) }",
+            r"       `)/`\  \ \ .'  _ 0_._0 _  '. /     .,_",
+            r"             \|| } -.'   (_)   '.- {    _{   `\ ",
+            r"              \|{_ / '.___|___.' \  }  //`._   |",
+            r"            /`    \     |   |     }  }:'-.  ```''--..==,",
+            r"           {      ,}    \-'-/   .'  } {,`-'.       //>`\>",
+            r"          {`   _./|\._.  '-'  ._ .~` /`    ;'.    //>  |>",
+            r"          {     {///(  `-.-.-`  ) _.'     /   '. ||>   />",
+            r"           \     \|\);-- ( ) -- (`       }      `\ \>_.'>",
+            r"            ;  _/`/(__.'/`-'.,__/`,    .`         `'' '`",
+            r"           .-'`     ;-.(     \_(;  \ .'     .--,",
+            r"          (`-._   ./   `       '.   `-._..~` /\ \ ",
+            r"           `'-;/``.              `;-'`:     |  ||",
+            r"      .--._ _.' .  \      o       ;  .      |  /|",
+            r"     /.-.  `     .  '._        _.'  '       \_//",
+            r"     ||  \        `.   `'-----`  _.~`--..__,..'",
+            r"     |\   |       .~`'--......--'",
+            r"     \ '._/   _.~`",
+            r"       `.__.-'"
+        ])
+
+        assert message_teddy == expected_teddy, f"Expected message to contain age and name in all-caps and centered, but got:\n{message_teddy}"
+
+    def test_invalid_arg_teddy(self):
+        '''
+        Testing when called with invalid age (length too long) and name (incorrect type) arguments.
+        The default message "HAPPY BIRTHDAY" is displayed on lines 1 and 3,
+        and the age and name are ignored
+        '''
+        invalid_teddy = teddy("100000000th", 20)
+        expected_teddy = plain_teddy
+
+        assert invalid_teddy == expected_teddy, f"Expected default teddy, but got:\n{invalid_teddy}"
