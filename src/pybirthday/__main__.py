@@ -25,6 +25,12 @@ def main():
     balloon_str_2 = pybirthday.balloon()  # Display a random balloon
     print(balloon_str_2)
 
+    teddy_str_1 = pybirthday.teddy()
+    print(teddy_str_1)
+
+    teddy_str_2 = pybirthday.teddy("20th", "Lauren")
+    print(teddy_str_2)
+
 if __name__ == "__main__":
     # run the main function
     main()
