@@ -5,7 +5,6 @@ def cake(name=None, words="Hope all your birthday wishes come true!"):
     if name is not None and isinstance(name, str) and len(name) <= 15:
         name_on_cake = f"{name.upper()}"
         name_on_cake = name_on_cake.center(15)
-    
     cake_style = [
             r"                0   0",
             r"                |   |",
@@ -22,7 +21,7 @@ def cake(name=None, words="Hope all your birthday wishes come true!"):
             r"|         B i r t h d a y! ! !      |",
             r"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
             r"|___________________________________|",
-            f";{words};"
+            words
     ]
     return "\n".join(cake_style)
 
