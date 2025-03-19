@@ -1,4 +1,4 @@
-![Python test](https://github.com/software-students-spring2025/3-python-package-helloworld/actions/workflows/ci.yaml/badge.svg)
+![Python test](https://github.com/software-students-spring2025/3-python-package-helloworld/actions/workflows/ci.yml/badge.svg)
 
 # Python Package Exercise
 
