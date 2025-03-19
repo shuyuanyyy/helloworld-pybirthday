@@ -1,7 +1,30 @@
 import random
 
-def cake(name, words):
-    return
+def cake(name=None, words="Hope all your birthday wishes come true!"):
+    name_on_cake = "               "
+    if name is not None and isinstance(name, str) and len(name) <= 15:
+        name_on_cake = f"{name.upper()}"
+        name_on_cake = name_on_cake.center(15)
+    
+    cake_style = [
+            r"                0   0",
+            r"                |   |",
+            r"            ____|___|____",
+            r"         0  |~ ~ ~ ~ ~ ~|   0",
+            r"         |  |           |   |",
+            r"      ___|__|___________|___|__",
+            r"      |/\/\/\/\/\/\/\/\/\/\/\/|",
+            f"  0   |    ;{name_on_cake};    |   0",
+            r"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |",
+            r" _|___|_______________________|___|__",
+            r"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|",
+            r"|             H a p p y             |",
+            r"|         B i r t h d a y! ! !      |",
+            r"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
+            r"|___________________________________|",
+            f";{words};"
+    ]
+    return "\n".join(cake_style)
 
 def candle(n=None):
     """
