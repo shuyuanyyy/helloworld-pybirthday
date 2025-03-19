@@ -1,5 +1,5 @@
 import pytest
-from src.pybirthday.pybirthday import cake, candle
+from src.pybirthday.pybirthday import cake, candle, balloon
 
 class Tests:
 
@@ -164,3 +164,114 @@ class Tests:
             ]
         ]
         assert any(result == candle for candle in candle_styles)
+
+
+    #Test for balloons
+    def test_specific_balloon(self):
+        """
+        Test if calling 'balloon(n)' returns the correct balloon at index 'n'.
+        """
+        first_balloon = balloon(0)
+        expected_balloon = "\n".join([
+            "                          __",
+            "                        ,\"  \".",
+            "     _      .---.    _ /#     \\",
+            "   ,' `.  ,'     `.." ".      ,--.",
+            "   |#   `/ #      (#    )    /    )",
+            "    `.   |         )   (`.__/    /",
+            "      `. \\        (     )/'/    /",
+            "        `.\\       /)   (( /    /",
+            "           `.   .'(     )y    /",
+            "             >_<\\  `._.'(    /",
+            "             /   ) /'-`.->,-'",
+            "            (   ( (   (",
+            "             )     )   )",
+            "                  ("
+        ])
+        assert first_balloon == expected_balloon, f"Expected first balloon, but got:\n{first_ballon}"
+
+    def test_random_balloon(self):
+        """
+        Test if calling 'balloon()' without arguments returns a valid balloon from the list.
+        """
+        result = balloon().split("\n")
+        # Define possible balloon styles
+        balloon_styles = [
+            [
+                "                          __",
+                "                        ,\"  \".",
+                "     _      .---.    _ /#     \\",
+                "   ,' `.  ,'     `.." ".      ,--.",
+                "   |#   `/ #      (#    )    /    )",
+                "    `.   |         )   (`.__/    /",
+                "      `. \\        (     )/'/    /",
+                "        `.\\       /)   (( /    /",
+                "           `.   .'(     )y    /",
+                "             >_<\\  `._.'(    /",
+                "             /   ) /'-`.->,-'",
+                "            (   ( (   (",
+                "             )     )   )",
+                "                  ("
+            ],
+            [
+                "     ,-''''-.",
+                "   ,'      _ `.",
+                "  /       )_)  \\",
+                " :              :",
+                " \\              /",
+                "  \\            /",
+                "   `.        ,'",
+                "     `.    ,'",
+                "       `.,'",
+                "        /\\`.   ,-._",
+                "            `-'"
+            ],
+            [
+                "     ######",
+                "   ##########",
+                "  ######    _\\_",
+                "  ##===----[.].]",
+                "  #(     ,   _\\",
+                "   #      )\\__|",
+                "    \\        /",
+                "     `-._``-'",
+                "        >@",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |",
+                "         |"
+            ],
+            [
+                "     .;;;;;;       ;;;;;;,.",
+                "   .;;;;;;;;;     ;;;;;;;;;;,",
+                " .;;;;;;;;;;;;   ;;;;;;;;;;;;;.",
+                " ;;;;;@;;;;;;;; ;;;;;;;;;;;;;;;'",
+                " ;;;;@@;;;;;;;;;;;;;;;;;;;;;;;;'",
+                " ;;;;@@;;;;;;;;;;;;;;;;;;;;;;;;'",
+                " `;;;;@;;;;;;;;;;;;;;;@;;;;;;;'",
+                "  `;;;;;;;;;;;;;;;;;;;@@;;;;;'",
+                "    `;;;;;;;;;;;;;;;;@@;;;;'",
+                "      `;;;;;;;;;;;;;@;;;;'",
+                "         `;;;;;;;;;;;;'",
+                "            `;;;;;;'",
+                "               ;;",
+                "               `",
+                "              `",
+                "             `",
+                "            `",
+                "           `",
+                "          `",
+                "         `",
+                "         `",
+                "         `",
+                "          `",
+                "            `.",
+            ]
+        ]
+        assert any(result == balloon for balloon in balloon_styles)
