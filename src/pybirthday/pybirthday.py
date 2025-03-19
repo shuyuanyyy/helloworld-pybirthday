@@ -208,3 +208,60 @@ def balloon(n=None):
         style = balloon_styles[n % len(balloon_styles)]
     
     return "\n".join(style)
+
+def teddy(age=None, name=None):
+    '''
+    This function returns a drawing of a teddy bear!
+    The default message is "HAPPY BIRTHDAY," but you can add optional params to add
+    age and name into the message.
+    Both age and name need to be <=10 chars long, or else the function will ignore it
+    '''
+    #default message
+    line2 = "          "
+    line4 = "          "
+
+    #validate params
+    if age is not None and isinstance(age, (int, str)) and len(str(age)) <= 10:
+        age_str = f"{str(age).upper()}"
+        line2 = age_str.center(10)
+    if name is not None and isinstance(name, str) and len(name) <= 10:
+        name_str = f"{name.upper()}"
+        line4 = name_str.center(10)
+
+    image = [
+        r"     __",
+        r"  .'`  `'.",
+        r" /        \ _",
+        r";      __.'` `'.",
+        r"|   .'`  `'.    \ ",
+        r" \ / HAPPY  \    ;",
+        f"  ;{line2};   |",
+        r"  | BIRTHDAY |   ;   _",
+        f"  ;{line4};-./-_-` '-.",
+        r"  /\        /_(;'/ `\    '.",
+        r" ;  '.__  .'\|| '    |     '.",
+        r" |      ),\| \ \     /       \ ",
+        r" ;        \ \|/   __/         \  __",
+        r"  \        \||\.~'_ `'.;-.___.~'` _'~.",
+        r"   '.__  _/|/|/{ (_`.'         '.`_) }",
+        r"       `)/`\  \ \ .'  _ 0_._0 _  '. /     .,_",
+        r"             \|| } -.'   (_)   '.- {    _{   `\ ",
+        r"              \|{_ / '.___|___.' \  }  //`._   |",
+        r"            /`    \     |   |     }  }:'-.  ```''--..==,",
+        r"           {      ,}    \-'-/   .'  } {,`-'.       //>`\>",
+        r"          {`   _./|\._.  '-'  ._ .~` /`    ;'.    //>  |>",
+        r"          {     {///(  `-.-.-`  ) _.'     /   '. ||>   />",
+        r"           \     \|\);-- ( ) -- (`       }      `\ \>_.'>",
+        r"            ;  _/`/(__.'/`-'.,__/`,    .`         `'' '`",
+        r"           .-'`     ;-.(     \_(;  \ .'     .--,",
+        r"          (`-._   ./   `       '.   `-._..~` /\ \ ",
+        r"           `'-;/``.              `;-'`:     |  ||",
+        r"      .--._ _.' .  \      o       ;  .      |  /|",
+        r"     /.-.  `     .  '._        _.'  '       \_//",
+        r"     ||  \        `.   `'-----`  _.~`--..__,..'",
+        r"     |\   |       .~`'--......--'",
+        r"     \ '._/   _.~`",
+        r"       `.__.-'"
+    ]
+
+    return "\n".join(image)
