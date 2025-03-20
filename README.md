@@ -83,3 +83,10 @@ Unit tests are included within the tests directory. To run these tests:
 - [Frank Fang](https://github.com/FrankFangH)
 - [Lauren Zhou](https://github.com/laurenlz)
 - [Shuyuan Yang](https://github.com/shuyuanyyy)
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+## References
+1. [ASCII Art](https://asciiart.website/index.php) - The ASCII art used in the functions was obtained from this website.
