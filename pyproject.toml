@@ -9,7 +9,7 @@ version = "0.1.1"
 authors = [
   { name="Shuyuan Yang", email="sy3644@nyu.edu" },
   { name="Frank Fang", email="hf2371@nyu.edu" },
-  { name="Lauren Zhou", email="email2@nyu.edu" },
+  { name="Lauren Zhou", email="llz3185@nyu.edu" },
   { name="Eric Xu", email="zx1244@nyu.edu" }
 ]
 license = { file = "LICENSE" }
