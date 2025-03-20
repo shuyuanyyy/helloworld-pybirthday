@@ -3,7 +3,7 @@
 # The `pybirthday` Package
 
 pybirthday is a Python package that lets users generate festive birthday-themed visuals!  
-*insert PyPI link here*  
+*[Package Page on PyPI](https://pypi.org/project/pybirthday/0.1.1/)*  
 Currently, the package offers four functions:
 1. **cake()**: returns a birthday cake with a personalized name and a custom message.
    - Syntax: `pybirthday.cake(name, words)`
