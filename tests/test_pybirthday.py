@@ -311,6 +311,41 @@ class Tests:
             ]
         ]
         assert any(result == balloon for balloon in balloon_styles)
+    
+    def test_balloon_(self):
+        """
+        Test if calling 'balloon(n)' with 'n' greater than the available styles returns the last balloon.
+        """
+        last_balloon = balloon(999)
+        expected_balloon = "\n".join(
+            [
+                "     .;;;;;;       ;;;;;;,.",
+                "   .;;;;;;;;;     ;;;;;;;;;;,",
+                " .;;;;;;;;;;;;   ;;;;;;;;;;;;;.",
+                " ;;;;;@;;;;;;;; ;;;;;;;;;;;;;;;'",
+                " ;;;;@@;;;;;;;;;;;;;;;;;;;;;;;;'",
+                " ;;;;@@;;;;;;;;;;;;;;;;;;;;;;;;'",
+                " `;;;;@;;;;;;;;;;;;;;;@;;;;;;;'",
+                "  `;;;;;;;;;;;;;;;;;;;@@;;;;;'",
+                "    `;;;;;;;;;;;;;;;;@@;;;;'",
+                "      `;;;;;;;;;;;;;@;;;;'",
+                "         `;;;;;;;;;;;;'",
+                "            `;;;;;;'",
+                "               ;;",
+                "               `",
+                "              `",
+                "             `",
+                "            `",
+                "           `",
+                "          `",
+                "         `",
+                "         `",
+                "         `",
+                "          `",
+                "            `.",
+            ]
+        )
+        assert last_balloon == expected_balloon, f"Expected last balloon but got:\n{last_balloon} "
 
     #TESTS FOR TEDDY
     def test_default_teddy(self):
