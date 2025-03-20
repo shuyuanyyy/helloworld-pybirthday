@@ -8,8 +8,8 @@ Currently, the package offers four functions:
 1. **cake()**: returns a birthday cake with a personalized name and a custom message.
    - Syntax: `pybirthday.cake(name, words)`
    - Parameters:
-     - `name` (optional): A string (up to 15 characters) to be displayed on the cake. If no name is provided or invalid, the cake will display a blank space.
-     - `words` (optional): A string with a custom message to be printed below the cake. Defaults to "Hope all your birthday wishes come true!"
+     - `name`: Optional. A string (up to 15 characters) to be displayed on the cake. If no name is provided or invalid, the cake will display a blank space.
+     - `words: Optional. A string with a custom message to be printed below the cake. Defaults to "Hope all your birthday wishes come true!"
 2. **candle()**: returns an image of a candle from various styles.
    - Syntax: `pybirthday.candle(style)`
    - Parameter:
