@@ -1,6 +1,6 @@
 ![Python test](https://github.com/software-students-spring2025/3-python-package-helloworld/actions/workflows/ci.yml/badge.svg)
 
-# The ·pybirthday· Package
+# The `pybirthday` Package
 
 pybirthday is a Python package that lets users generate festive birthday-themed visuals!  
 *insert PyPI link here*  
@@ -22,7 +22,7 @@ Currently, the package offers four functions:
    - Syntax: `pybirthday.teddy(age, name)`
    - Parameters: 
      - `age`: Optional. Includes age in the greeting. Specify in oridinal format (i.e "20th, "2nd"). Can take integers or strings of no more than 10 characters.
-     - `name`: Optional. Includes age in the greeting. Can take strings of no more than 10 characters.
+     - `name`: Optional. Includes name in the greeting. Can take strings of no more than 10 characters.
      - Invalid parameters are ignored!
 
 ## Installation
