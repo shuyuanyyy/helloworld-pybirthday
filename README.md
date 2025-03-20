@@ -83,3 +83,7 @@ Unit tests are included within the tests directory. To run these tests:
 - [Frank Fang](https://github.com/FrankFangH)
 - [Lauren Zhou](https://github.com/laurenlz)
 - [Shuyuan Yang](https://github.com/shuyuanyyy)
+
+
+## References
+1. [ASCII Art](https://asciiart.website/index.php) - The ASCII arts used in the functions were obtained from this website.
