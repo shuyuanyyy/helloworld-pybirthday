@@ -226,6 +226,8 @@ def balloon(n=None):
     
     if n is None:
         style = random.choice(balloon_styles)
+    elif n > len(balloon_styles) - 1:
+        style = balloon_styles[len(balloon_styles) - 1]
     else:
         style = balloon_styles[n % len(balloon_styles)]
     
