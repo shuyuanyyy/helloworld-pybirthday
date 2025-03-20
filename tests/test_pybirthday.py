@@ -378,3 +378,83 @@ class Tests:
         expected_teddy = plain_teddy
 
         assert invalid_teddy == expected_teddy, f"Expected default teddy, but got:\n{invalid_teddy}"
+        
+        
+    #Test for cake
+    def test_default_cake(self):
+        '''
+        Testing when called without arguments.
+        The default message "Hope all your birthday wishes come true!" is displayed on the last line.
+        '''
+        default_cake = cake()
+        expected_cake = "\n".join([
+            r"                0   0",
+            r"                |   |",
+            r"            ____|___|____",
+            r"         0  |~ ~ ~ ~ ~ ~|   0",
+            r"         |  |           |   |",
+            r"      ___|__|___________|___|__",
+            r"      |/\/\/\/\/\/\/\/\/\/\/\/|",
+            r"  0   |                       |   0",
+            r"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |",
+            r" _|___|_______________________|___|__",
+            r"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|",
+            r"|             H a p p y             |",
+            r"|         B i r t h d a y! ! !      |",
+            r"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
+            r"|___________________________________|",
+            r"Hope all your birthday wishes come true!"
+        ])
+
+        assert default_cake == expected_cake, f"Expected default cake, but got:\n{default_cake}"
+        
+    def test_message_cake(self):
+        message_cake = cake("TestContent", "Hi, this is a test.")
+        expected_cake = "\n".join([
+                r"                0   0",
+                r"                |   |",
+                r"            ____|___|____",
+                r"         0  |~ ~ ~ ~ ~ ~|   0",
+                r"         |  |           |   |",
+                r"      ___|__|___________|___|__",
+                r"      |/\/\/\/\/\/\/\/\/\/\/\/|",
+                r"  0   |      TESTCONTENT      |   0",
+                r"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |",
+                r" _|___|_______________________|___|__",
+                r"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|",
+                r"|             H a p p y             |",
+                r"|         B i r t h d a y! ! !      |",
+                r"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
+                r"|___________________________________|",
+                r"Hi, this is a test."
+            ])
+
+        assert message_cake == expected_cake, f"Expected message to contain name and words, but got:\n{message_cake}"
+        
+    def test_invalid_arg_cake(self):
+        '''
+        Testing when called with invalid name (length too long).
+        The default pattern of cake will be displayed ignoring the name.
+        '''
+        
+        invalid_cake = cake("abcdefghijklmnopqrst", "Hi, this is a test.")
+        expected_cake = "\n".join([
+            r"                0   0",
+            r"                |   |",
+            r"            ____|___|____",
+            r"         0  |~ ~ ~ ~ ~ ~|   0",
+            r"         |  |           |   |",
+            r"      ___|__|___________|___|__",
+            r"      |/\/\/\/\/\/\/\/\/\/\/\/|",
+            r"  0   |                       |   0",
+            r"  |   |/\/\/\/\/\/\/\/\/\/\/\/|   |",
+            r" _|___|_______________________|___|__",
+            r"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|",
+            r"|             H a p p y             |",
+            r"|         B i r t h d a y! ! !      |",
+            r"| ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ |",
+            r"|___________________________________|",
+            r"Hi, this is a test."
+        ])
+
+        assert invalid_cake == expected_cake, f"Expected default cake with words, but got:\n{invalid_cake}"
