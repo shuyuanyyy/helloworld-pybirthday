@@ -84,9 +84,6 @@ Unit tests are included within the tests directory. To run these tests:
 - [Lauren Zhou](https://github.com/laurenlz)
 - [Shuyuan Yang](https://github.com/shuyuanyyy)
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 
 ## References
 1. [ASCII Art](https://asciiart.website/index.php) - The ASCII arts used in the functions were obtained from this website.
