@@ -36,9 +36,9 @@ Currently, the package offers four functions:
 Install the package via pip:
 ```bash
 pip install pybirthday
+```
 
-
-## Usage
+# Usage
 ```python
 from pybirthday import cake, candle, balloon, teddy
 
