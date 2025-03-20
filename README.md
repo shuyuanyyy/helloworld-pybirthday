@@ -38,7 +38,7 @@ Install the package via pip:
 pip install pybirthday
 ```
 
-# Usage
+## Usage 📝
 ```python
 from pybirthday import cake, candle, balloon, teddy
 
