@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 ## References
-1. [ASCII Art](https://asciiart.website/index.php) - The ASCII art used in the functions was obtained from this website.
+1. [ASCII Art](https://asciiart.website/index.php) - The ASCII arts used in the functions were obtained from this website.
