@@ -39,6 +39,8 @@ pip install pybirthday
 ```
 
 ## Usage 📝
+
+To use `pybirthday` in your own Python projects, import and call the functions:
 ```python
 from pybirthday import cake, candle, balloon, teddy
 
