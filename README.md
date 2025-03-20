@@ -43,20 +43,20 @@ pip install pybirthday
 from pybirthday import cake, candle, balloon, teddy
 
 mycake = cake("Alice", "Happy 20th Birthday!")
-print(mycake) #prints cake with "Alice" written on cake, and "Happy 20th Birthday!" at the bottom
+print(mycake) # Prints cake with "Alice" written on cake, and "Happy 20th Birthday!" at the bottom
 
 myteddy = teddy("20th", "Bob")
-print(myteddy) #prints teddy bear saying "HAPPY 20TH BIRTHDAY BOB"
+print(myteddy) # Prints teddy bear saying "HAPPY 20TH BIRTHDAY BOB"
 
 mycandle_1 = candle()
 mycandle_2 = candle(2)
-print(mycandle_1) #prints a random candle
-print(mycandle_2) #prints candle style #3
+print(mycandle_1) # Prints a random candle
+print(mycandle_2) # Prints candle style #3
 
 myballoon_1 = balloon()
 myballoon_2 = balloon(2)
-print(myballoon_1) #prints random balloons
-print(myballoon_2) #prints balloon style #3
+print(myballoon_1) # Prints random balloons
+print(myballoon_2) # Prints balloon style #3
 ```
 
 ## How to Contribute 🤝
